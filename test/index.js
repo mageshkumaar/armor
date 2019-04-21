@@ -1,6 +1,6 @@
-const http = require('http')
-const request = require('supertest')
-const kaavalan = require('..')
+var http = require('http')
+var request = require('supertest')
+var kaavalan = require('..')
 
 describe('kaavalan()', function () {
   before(function () {
