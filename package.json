@@ -4,9 +4,9 @@
   "description": "An express.js middleware that handles request related security.",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint --plugin markdown --ext js,md .",
-    "lint-fix": "./node_modules/.bin/eslint --plugin markdown --fix --ext js,md .",
-    "test": "mocha --reporter spec --check-leaks --bail test/"
+    "lint": "eslint --plugin markdown --ext js,md .",
+    "lint-fix": "eslint --plugin markdown --fix --ext js,md .",
+    "test": "mocha test/"
   },
   "repository": {
     "type": "git",
