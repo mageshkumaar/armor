@@ -4,7 +4,9 @@
   "description": "An express.js middleware that handles request related security.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/.bin/eslint --plugin markdown --ext js,md .",
+    "lint-fix": "./node_modules/.bin/eslint --plugin markdown --fix --ext js,md .",
+    "test": "mocha --reporter spec --check-leaks --bail test/"
   },
   "repository": {
     "type": "git",
@@ -24,8 +26,11 @@
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-markdown": "^1.0.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.1.4",
+    "supertest": "^4.0.2"
   }
 }
