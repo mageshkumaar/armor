@@ -1,8 +1,8 @@
 var http = require('http')
 var request = require('supertest')
-var kaavalan = require('..')
+var armor = require('..')
 
-describe('kaavalan()', function () {
+describe('armor()', function () {
   before(function () {
     this.server = createServer()
   })
@@ -19,9 +19,9 @@ describe('kaavalan()', function () {
  * @param {object} options
  */
 function createServer (options) {
-  var _kaavalan = kaavalan(options)
+  var _armor = armor
   return http.createServer(function (req, res) {
-    _kaavalan(req, res, function (err) {
+    _armor.middleware(req, res, function (err) {
       res.statusCode = err ? (err.status || 500) : 200
       res.end(err ? err.message : JSON.stringify(req.body))
     })

@@ -1,16 +1,21 @@
-module.exports = kaavalan
-
 /**
- * Create a middleware to parse request and check it's various
- * properties like parameters, type etc.,
- *
- * @param {object} [options]
- * @return {function}
- * @public
- */
+* @author      Magesh Kumaar <mageshkumaar@outlook.com>
+* @link        https://github.com/mageshkumaar/armor
+* @license     https://opensource.org/licenses/BSD-3-Clause
 
-function kaavalan (options) {
-  return function kaavalan (req, res, next) {
+* @version     1.0.0
+*/
+
+'use strict'
+
+module.exports = (function () {
+  var armor = {}
+  
+  armor.configure = function configureArmor (options) {
+  }
+  
+  armor.middleware = function (req, res, next) {
     return next()
   }
-}
+  return armor
+})()

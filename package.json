@@ -1,5 +1,5 @@
 {
-  "name": "kaavalan",
+  "name": "armor",
   "version": "1.0.0",
   "description": "An express.js middleware that handles request related security.",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mageshkumaar/kaavalan.git"
+    "url": "git+https://github.com/mageshkumaar/armor.git"
   },
   "keywords": [
     "security",
@@ -19,9 +19,9 @@
   "author": "Magesh Kumaar <mageshkumaar@outlook.com>",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/mageshkumaar/kaavalan/issues"
+    "url": "https://github.com/mageshkumaar/armor/issues"
   },
-  "homepage": "https://github.com/mageshkumaar/kaavalan#readme",
+  "homepage": "https://github.com/mageshkumaar/armor#readme",
   "devDependencies": {
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
