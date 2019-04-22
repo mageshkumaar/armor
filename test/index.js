@@ -9,7 +9,7 @@ describe('armor()', function () {
 
   it('should check server is created properly', function (done) {
     request(this.server)
-      .post('/')
+      .get('/')
       .expect(200, '', done)
   })
 })
@@ -19,9 +19,9 @@ describe('armor()', function () {
  * @param {object} options
  */
 function createServer (options) {
-  var _armor = armor
+  var _armor = armor.configure()
   return http.createServer(function (req, res) {
-    _armor.middleware(req, res, function (err) {
+    _armor(req, res, function (err) {
       res.statusCode = err ? (err.status || 500) : 200
       res.end(err ? err.message : JSON.stringify(req.body))
     })

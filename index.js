@@ -8,14 +8,29 @@
 
 'use strict'
 
+// Public exports
 module.exports = (function () {
-  var armor = {}
-  
-  armor.configure = function configureArmor (options) {
+  var configure = function configureArmor (options) {
+    // Middleware for express
+    return function (req, res, next) {
+      validate(req, function () {
+        return next()
+      }, function () {
+
+      })
+    }
   }
-  
-  armor.middleware = function (req, res, next) {
-    return next()
+
+  return {
+    configure
   }
-  return armor
 })()
+
+function validate (req, success, failure) {
+  var valid = true
+  if (valid) {
+    success()
+  } else {
+    failure()
+  }
+}
